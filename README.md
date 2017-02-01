@@ -7,5 +7,4 @@ This is a production-level project by the students in the Computer Science Club 
 Intent: To create a web application to resemble the quizzes used by AP® Human Geography Teachers.
 
 ## Contributing
-
-We invite anyone to contribute. [Please view the contribution guidelines here.](https://github.com/pwsh/geo-maps/wiki/Contribution-Guidelines)
+[Please view the contribution guidelines here.](https://github.com/pwsh/geo-maps/wiki/Contribution-Guidelines)
