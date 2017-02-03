@@ -61,3 +61,12 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+li.map_selector {
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+li.map_selector h3 {
+    text-align: center;
+}
