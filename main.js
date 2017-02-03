@@ -5,11 +5,7 @@ $(document).ready(function (e) {
     $listLi.sort(function (a, b) {
         var keyA = $(a).text();
         var keyB = $(b).text();
-        if ($($sort).hasClass('asc')) {
-            return (keyA > keyB) ? 1 : 0;
-        } else {
-            return (keyA > keyB) ? 1 : 0;
-        }
+        return (keyA > keyB) ? 1 : 0;
     });
     $.each($listLi, function (index, row) {
         $list.append(row);
