@@ -2,61 +2,68 @@
 <head>
     <title>GeoMaps</title>
 
+    <!-- jQuery -->
+    <script src="./js/dependencies/jquery-3.1.1.js"></script>
+
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="./js/dependencies/bootstrap-3.3.7-dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="./js/dependencies/bootstrap-3.3.7-dist/css/bootstrap-theme.css" />
     <script src="./js/dependencies/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-
-    <!-- jQuery -->
-    <script src="./js/dependencies/jquery-3.1.1.js"></script>
 
     <link rel="stylesheet" type="text/css" href="./styles/main.css">
     <script type="text/javascript" src="./js/main.js"></script>
 </head>
 
 <body>
-    <ul class="nav">
-        <li class="nav navhome">
-            <a href="/">
-                <h3 style="display:inline">GeoMaps</h3>
-                <h6 style="display:inline">for use with AP® Human Geography</h6>
-            </a>
-        </li>
-        <li class="nav" style="float:right"><a href="#maps">About</a></li>
-        <li class="dropdown" style="float:right">
-            <a href="javascript:void(0)" class="dropbtn">Maps</a>
-            <div class="dropdown-content">
-                <!--This list will be automatically alphabetized by JS-->
-                <a href="#">East Asia</a>
-                <a href="#">Oceania</a>
-                <a href="#">Russia</a>
-                <a href="#">Europe</a>
-                <a href="#">South Asia</a>
-                <a href="#">Southeast Asia</a>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <b>GeoMaps</b>
+                    <h6 style="display:inline">for use with AP® Human Geography</h6>
+                </a>
             </div>
-        </li>
-    </ul>
-    <h2 style="text-align:center">Select your map:</h2>
-    <ul class="map_selector" style="position: relative;
-left: -20px;
-;text-align:center">
-        <li class="map_selector">
-            <h3>East Asia</h3>
-        </li>
-        <li class="map_selector">
-            <h3>Oceania</h3>
-        </li>
-        <li class="map_selector">
-            <h3>Russia</h3>
-        </li>
-        <li class="map_selector">
-            <h3>Europe</h3>
-        </li>
-        <li class="map_selector">
-            <h3>South Asia</h3>
-        </li>
-        <li class="map_selector">
-            <h3>Southeast Asia</h3>
-        </li>
-    </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="nav"><a href="#maps">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Maps <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <!--This list will be automatically alphabetized by JS-->
+                        <li><a href="#">East Asia</a></li>
+                        <li><a href="#">Oceania</a></li>
+                        <li><a href="#">Russia</a></li>
+                        <li><a href="#">Europe</a></li>
+                        <li><a href="#">South Asia</a></li>
+                        <li><a href="#">Southeast Asia</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid text-center">
+        <h2>Select your map:</h2>
+        <ul class="list-unstyled">
+            <li class="map_selector">
+                <h3>East Asia</h3>
+            </li>
+            <li class="map_selector">
+                <h3>Oceania</h3>
+            </li>
+            <li class="map_selector">
+                <h3>Russia</h3>
+            </li>
+            <li class="map_selector">
+                <h3>Europe</h3>
+            </li>
+            <li class="map_selector">
+                <h3>South Asia</h3>
+            </li>
+            <li class="map_selector">
+                <h3>Southeast Asia</h3>
+            </li>
+        </ul>
+    </div>
 </body>
