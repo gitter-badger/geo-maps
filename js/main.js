@@ -1,3 +1,16 @@
-// Declarative JS to tinker with pages is bad practice.
-// I recommend using a MVC library such as React or AngularJS.
-// Anyway, that's besides the point for right now, since this is still a mockup.
+angular.module('geomaps', [])
+
+.factory('DataFactory', function() {
+	/* Replace this with an AJAX Request later */
+	var maps = ['East Asia', 'Oceania', 'Russia', 'Europe', 'South Asia', 'Southeast Asia'];
+	maps.sort();
+	return {maps: maps};
+})
+
+.controller('NavCtrl', function($scope, DataFactory) {
+	$scope.maps = DataFactory.maps;
+})
+
+.controller('FrontPageCtrl', function($scope, DataFactory) {
+	$scope.maps = DataFactory.maps;
+})

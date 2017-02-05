@@ -1,9 +1,13 @@
 <!DOCTYPE html>
+<html ng-app="geomaps">
 <head>
     <title>GeoMaps</title>
 
-    <!-- jQuery -->
+    <!-- jQuery (typically you don't want this with Angular, but we're doing it here for simplicity) -->
     <script src="./js/dependencies/jquery-3.1.1.js"></script>
+
+    <!-- AngularJS -->
+    <script src="./js/dependencies/angular.js"></script>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="./js/dependencies/bootstrap-3.3.7-dist/css/bootstrap.css" />
@@ -15,7 +19,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" ng-controller="NavCtrl">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
@@ -29,13 +33,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Maps <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <!--This list will be automatically alphabetized by JS-->
-                        <li><a href="#">East Asia</a></li>
-                        <li><a href="#">Oceania</a></li>
-                        <li><a href="#">Russia</a></li>
-                        <li><a href="#">Europe</a></li>
-                        <li><a href="#">South Asia</a></li>
-                        <li><a href="#">Southeast Asia</a></li>
+                        <li ng-repeat="map in maps"><a href="#">{{map}}</a></li>
                     </ul>
                 </li>
 
@@ -43,27 +41,11 @@
         </div>
     </nav>
 
-    <div class="container-fluid text-center">
+    <div class="container-fluid text-center" ng-controller="FrontPageCtrl">
         <h2>Select your map:</h2>
         <ul class="list-unstyled">
-            <li class="map_selector">
-                <h3>East Asia</h3>
-            </li>
-            <li class="map_selector">
-                <h3>Oceania</h3>
-            </li>
-            <li class="map_selector">
-                <h3>Russia</h3>
-            </li>
-            <li class="map_selector">
-                <h3>Europe</h3>
-            </li>
-            <li class="map_selector">
-                <h3>South Asia</h3>
-            </li>
-            <li class="map_selector">
-                <h3>Southeast Asia</h3>
-            </li>
+            <li ng-repeat="map in maps"><h3>{{map}}</h3></li>
         </ul>
     </div>
 </body>
+</html>
